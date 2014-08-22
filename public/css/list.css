@@ -1,0 +1,104 @@
+body {
+  background-color: #57E4C8;
+  font-size: 100%;
+}
+
+#inputArea {
+  text-align: center;
+}
+
+#inputArea input {
+  margin-left: 20px;
+  width: 400px;
+  height: 40px;
+  border-radius: 4px;
+  background: #AAA;
+  color: white;
+  font-size: 1.4em;
+}
+
+#send {
+  margin-left: 20px;
+  width: 100px;
+  height: 36px;
+  border: thin solid #aaaaaa;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.8);
+  box-shadow: rgba(0,0,0,0.2) 2px 2px 2px 2px;
+  transition: all 0.6s ease-in 0.6s;
+}
+#send: hover {
+  background: rgba(255,255,255,0.4);
+  transition: all 1.2s ease-in 0.2s;
+}
+
+ul#todolists li {
+  display: block;
+  list-style: none;
+  z-index: 1;
+  float: left;
+  margin: 20px;
+  padding: 15px 15px 50px 15px;
+  width: 160px;
+  height: 160px;
+  border: 1px solid #bfbfbf;
+  background-color: #FC9;
+  color: black;
+  font-size: 1.2em;
+  text-decoration: none;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  overflow: hidden;
+}
+
+ul#todolists li:nth-child(even) {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+ul#todolists li:nth-child(odd) {
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+
+ul#todolists li:nth-child(3n) {
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+
+
+ul#todolists li:hover {
+  -webkit-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(0deg) scale(1.25);
+  -moz-transform: rotate(0deg) scale(1.25);
+  -o-transform: rotate(0deg) scale(1.25);
+  -ms-transform: rotate(0deg) scale(1.25);
+  transform: rotate(0deg) scale(1.25);
+  z-index: 10;
+}
+
+.done, .del {
+  background:rgba(255,255,255,0.2);
+  border:none;
+  border-radius:4px;
+  box-shadow:rgba(0,0,0,0.3) 4px 4px 0px 0px;
+  padding:4px;
+}

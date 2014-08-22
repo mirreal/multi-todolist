@@ -1,0 +1,25 @@
+doctype 5
+html
+  head
+    title ToDoList
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    hr
+    ul
+      if (authenticated)
+        li
+          a(id="user", href="/user/#{me.name}") #{me.name}
+        li
+          a(href="/logout") Logout
+        li(id="project") #{me.currentProject.name}
+        li
+          input(id="addUser", type="text")
+          input(id="addUserButton", type="button", value="addUser")
+      else
+        li: a(href="/login") Login
+        li: a(href="/signup") Sign up
+        li Public Lists
+    block body
+    hr
+    footer
+     p Copyright Mirreal's Notes 2014
