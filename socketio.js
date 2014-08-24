@@ -1,9 +1,12 @@
 exports.list = function(io, db) {
   io.on('connection', function(socket) {
     socket.on('online', function(data) {
+      socket.name = data.user;
+
       db.projects.findOne(data, function(err, doc) {
         if (err) return next(err);
         console.log(doc);
+        socket.emit('owner', doc.owner)
         if (doc) {
           var own = {
             author: doc.author,
@@ -59,6 +62,5 @@ exports.list = function(io, db) {
         if (err) return next(err);
       });
     });
-
   });
 };

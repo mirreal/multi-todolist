@@ -4,22 +4,28 @@ html
     title ToDoList
     link(rel='stylesheet', href='/css/style.css')
   body
-    hr
-    ul
-      if (authenticated)
+    if (authenticated)
+      ul
         li
           a(id="user", href="/user/#{me.name}") #{me.name}
         li
           a(href="/logout") Logout
         li(id="project") #{me.currentProject.name}
-        li
-          input(id="addUser", type="text")
-          input(id="addUserButton", type="button", value="addUser")
-      else
+      div(class="cleaner")
+      div(id="ele") Owers:
+        ul(id="owners")
+        input(id="addUser", type="text")
+        input(id="addUserButton", type="button", value="add User to this project")
+        
+    else
+      ul
         li: a(href="/login") Login
         li: a(href="/signup") Sign up
         li Public Lists
+    div(class="cleaner")
+    hr
     block body
+    div(class="cleaner")
     hr
     footer
      p Copyright Mirreal's Notes 2014
